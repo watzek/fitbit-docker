@@ -11,7 +11,7 @@ It uses:
 ```
 Ruby -v 2.3.1
 Rails -v 4.2.0
-PostgreSQL
+PostgreSQL -v 9.5.4
 ```
 
 ## Running Locally
