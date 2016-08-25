@@ -5,5 +5,5 @@ RUN mkdir /fitbit-ror
 WORKDIR /fitbit-ror
 ADD Gemfile /fitbit-ror/Gemfile
 ADD Gemfile.lock /fitbit-ror/Gemfile.lock
-RUN bundle install
+RUN bundle install --without production
 ADD . /fitbit-ror

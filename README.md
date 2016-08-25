@@ -1,28 +1,13 @@
-== README
+# fitbit-ror
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the fitbit app made by the Digital Initiatives at Watzek Library, Lewis & Clark College.
 
-Things you may want to cover:
+## Dependencies for development
 
-* Ruby version
+The application runs on docker. Install docker on your computer using [this](https://docs.docker.com/engine/installation/) instructions.
 
-* System dependencies
+It uses:
+```Ruby -v2.3.1
+Rails -v4.2.0```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Running Locally
