@@ -1,16 +1,23 @@
 language: ruby
 sudo: required
+env:
+  global:
+    - RAILS_ENV = test
+branches:
+  only:
+    - master
 services:
 - docker
-- postgresql
 rvm:
 - 2.3.1
 before_script:
-- psql -c "CREATE DATABASE fitbit_ror_test;" -U postgres
+- docker-compose build -f travis_compose.yml
+- docker-compose up -d -f travis_compose.yml
 script:
-- RAILS_ENV=test bundle exec rake db:migrate --trace
-- bundle exec rake db:test:prepare
-- bundle exec rake test
+- docker-compose run web rake db:create
+- docker-compose run web RAILS_ENV=test bundle exec rake db:migrate --trace
+- docker-compose run web bundle exec rake db:test:prepare
+- docker-compose run web bundle exec rake test
 - chmod +x *.sh
 - ./build.sh && ./push.sh
 env:
