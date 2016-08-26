@@ -213,7 +213,7 @@ DEPENDENCIES
   minitest-reporters (= 1.0.5)
   pg
   rails (= 4.2.0)
-  rake
+  rake (= 11.2.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
