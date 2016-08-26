@@ -11,7 +11,7 @@ script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
 - bundle exec rake test
-- "./build.sh && ./push.sh"
+- ./build.sh && ./push.sh
 env:
   global:
   - secure: Rzvjd4ejus6N5oNxCmxTxSZpUHDfpaNAxdeXbqrrsRbgauZBMoTtaI2Bw2F8a/uFHsMx3j6dE9b8I1zbBzS6S0s1TXhv+m7CGiu6nZfZOeEMlcDdkuyMfPcV1SKXDkRfMXu3GPoUJcfdmoG/5QqTyZx5MTDJLN/zorhXZ8P24pxDR529bVfmHZ+MwzJY2ASchFtGeuSjQRrvFUitbYUvYMQS0TszXuMqxXDgkJgpj570jSDGMpk8zi0t8r6U5ylrAq8k+MFrRFS6z31ZEZx8ryxWhRRDZ7FBGdCXx3t6n5mfvuv/h5iKCFh+P1sNTH6CLkW9l4poyXorFBYvMGOtBEH8++Xo6bk4FGlGEDRuckwkQl2v/qI+/e5D7vW0ISz88WPdO63jXQphzw69BSz5wTSPBYSoBrCAQIoVywcWPBEIzwg/HQRUH45aU6Pjf48q6FhgpgDIi6U0PJg8/JJHvNayjUmFN+OP1Iy/j+kuvXgWdKF2obYZ4e7yA8ca0BAaz6nBbSzUelovN/5kuom8+fAOtrWmPauIoEq19aAQbePUqXdghHGsSXulhbTvojIvU581aL+NiGA99XPmHYn0ktfD7qTHykrF59lTWV2EwfleoMVjD6USrRv/LTqJjqqLSyHnvavt1CoblpzJYMbM3wYonJt57WkJT94igaZfrLI=
