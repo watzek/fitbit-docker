@@ -1,4 +1,7 @@
 # fitbit-ror
+[![Build Status](https://travis-ci.org/WatzekDigitalInitiatives/fitbit-ror.svg?branch=master)](https://travis-ci.org/WatzekDigitalInitiatives/fitbit-ror)
+[![](https://images.microbadger.com/badges/version/watzek/fitbit.svg)](http://microbadger.com/images/watzek/fitbit "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/watzek/fitbit.svg)](http://microbadger.com/images/watzek/fitbit "Get your own image badge on microbadger.com")
 
 This is the fitbit app made by the Digital Initiatives at Watzek Library, Lewis & Clark College.
 
