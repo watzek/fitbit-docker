@@ -11,6 +11,7 @@ script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
 - bundle exec rake test
+- chmod +x *.sh
 - ./build.sh && ./push.sh
 env:
   global:
