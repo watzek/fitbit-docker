@@ -16,4 +16,4 @@ ADD . /fitbit-ror
 WORKDIR /fitbit-ror
 RUN bundle install --without production
 RUN chmod +x *.sh
-CMD ["init.sh"]
+CMD init.sh
