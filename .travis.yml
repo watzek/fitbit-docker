@@ -6,7 +6,7 @@ services:
 rvm:
 - 2.3.1
 before_script:
-- psql -c "CREATE DATABASE fitbit-ror_test;" -U postgres
+- psql -c "CREATE DATABASE fitbit_ror_test;" -U postgres
 script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
