@@ -11,8 +11,8 @@ services:
 rvm:
 - 2.3.1
 before_script:
-- docker-compose build -f travis_compose.yml
-- docker-compose up -d -f travis_compose.yml
+- docker-compose -f travis_compose.yml build
+- docker-compose -f travis_compose.yml up -d
 script:
 - docker-compose run web rake db:create
 - docker-compose run web RAILS_ENV=test bundle exec rake db:migrate --trace
