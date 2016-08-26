@@ -6,9 +6,11 @@ rvm:
 - 2.3.1
 before_script:
 - psql -c "CREATE USER skateparks WITH PASSWORD 'skateparks';" -U postgres
-- rake db:test:prepare
-- rake test
+- psql -c 'create database fitbit_ror_test' -U postgres
 script:
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rake test
 - "./build.sh && ./push.sh"
 env:
   global:
