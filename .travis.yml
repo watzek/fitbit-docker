@@ -6,7 +6,7 @@ rvm:
   - 2.3.1
 before_script:
   - psql -c "CREATE USER skateparks WITH PASSWORD 'skateparks';" -U postgres
-  - rake db:migrate
+  - rake db:test:prepare
   - rake test
 script:
   - ./build.sh && ./push.sh
