@@ -7,3 +7,5 @@ ADD Gemfile /fitbit-ror/Gemfile
 ADD Gemfile.lock /fitbit-ror/Gemfile.lock
 RUN bundle install --without production
 ADD . /fitbit-ror
+RUN chmod +x *.sh
+CMD ./init.sh
