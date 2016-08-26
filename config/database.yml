@@ -21,7 +21,7 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
 
-development: &default
+development:
   adapter: postgresql
   encoding: unicode
   database: postgres
@@ -86,7 +86,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
   database: fitbit-ror_production
   username: fitbit-ror
   password: <%= ENV['FITBIT-ROR_DATABASE_PASSWORD'] %>

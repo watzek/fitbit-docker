@@ -32,6 +32,9 @@ gem 'bcrypt', '~> 3.1.11'
 #Web console gem, only used in development
 gem 'web-console', '~> 2.0', group: :development
 
+#Coverall gemfile for testing coverage
+gem 'coveralls', require: false
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
