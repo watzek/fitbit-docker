@@ -1,8 +1,5 @@
 language: ruby
 sudo: required
-env:
-  global:
-    - RAILS_ENV = test
 branches:
   only:
     - master
@@ -14,9 +11,11 @@ before_script:
 - docker-compose -f travis_compose.yml up --build -d
 script:
 - docker ps -a
-- docker-compose run web rake db:create
-- docker-compose run web bundle exec rake db:test:prepare
-- docker-compose run web bundle exec rake test
+- docker exec -it fitbiror_web_1 /bin/bash
+- rake db:create
+- rake db:test:prepare
+- rake test
+- exit
 - chmod +x *.sh
 - ./build.sh && ./push.sh
 env:
