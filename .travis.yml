@@ -11,12 +11,12 @@ services:
 rvm:
 - 2.3.1
 before_script:
-- docker-compose -f travis_compose.yml build
-- docker-compose -f travis_compose.yml up -d
+- docker-compose -f travis_compose.yml up --build -d
 script:
-- docker-compose -f travis_compose.yml run web rake db:create
-- docker-compose -f travis_compose.yml run web bundle exec rake db:test:prepare
-- docker-compose -f travis_compose.yml run web bundle exec rake test
+- docker ps -a
+- docker-compose run web rake db:create
+- docker-compose run web bundle exec rake db:test:prepare
+- docker-compose run web bundle exec rake test
 - chmod +x *.sh
 - ./build.sh && ./push.sh
 env:
