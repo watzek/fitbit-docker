@@ -1,12 +1,9 @@
-language: ruby
 sudo: required
 branches:
   only:
     - master
 services:
 - docker
-rvm:
-- 2.3.1
 before_script:
 - docker-compose -f compose/test/docker-compose.yml up --build -d
 script:
