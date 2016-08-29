@@ -11,9 +11,10 @@ before_script:
 - docker-compose -f travis_compose.yml up --build -d
 script:
 - docker ps -a
-- docker exec fitbitror_web_1 rake db:create
-- docker exec fitbitror_web_1 rake db:test:prepare
-- docker exec fitbitror_web_1 rake test
+- docker-compose run web rake db:create
+- docker-compose run web rake db:test:prepare
+- docker-compose run web rake test
+after_success:
 - chmod +x *.sh
 - ./build.sh && ./push.sh
 env:
