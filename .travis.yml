@@ -9,9 +9,9 @@ before_script:
 script:
 - docker ps -a
 - sleep 30
-- docker-compose exec fitbitror_web rake db:create
-- docker-compose exec fitbitror_web rake db:test:prepare
-- docker-compose exec fitbitror_web rake test
+- docker-compose exec web rake db:create
+- docker-compose exec web rake db:test:prepare
+- docker-compose exec web rake test
 after_success:
 - chmod +x *.sh
 - ./build.sh && ./push.sh
