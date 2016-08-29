@@ -1,10 +1,11 @@
 sudo: required
 branches:
   only:
-    - master
+  - master
 services:
 - docker
 before_script:
+- echo "repo_secret_token: $COVERALLS_TOKEN" >> .coveralls.yml
 - docker-compose up --build -d
 script:
 - docker ps -a
@@ -12,10 +13,12 @@ script:
 - docker-compose exec web rake db:create
 - docker-compose exec web rake db:test:prepare
 - docker-compose exec web rake test
+- docker-compose exec web bundle exec coveralls push
 after_success:
 - chmod +x *.sh
-- ./build.sh && ./push.sh
+- "./build.sh && ./push.sh"
 env:
   global:
   - secure: Rzvjd4ejus6N5oNxCmxTxSZpUHDfpaNAxdeXbqrrsRbgauZBMoTtaI2Bw2F8a/uFHsMx3j6dE9b8I1zbBzS6S0s1TXhv+m7CGiu6nZfZOeEMlcDdkuyMfPcV1SKXDkRfMXu3GPoUJcfdmoG/5QqTyZx5MTDJLN/zorhXZ8P24pxDR529bVfmHZ+MwzJY2ASchFtGeuSjQRrvFUitbYUvYMQS0TszXuMqxXDgkJgpj570jSDGMpk8zi0t8r6U5ylrAq8k+MFrRFS6z31ZEZx8ryxWhRRDZ7FBGdCXx3t6n5mfvuv/h5iKCFh+P1sNTH6CLkW9l4poyXorFBYvMGOtBEH8++Xo6bk4FGlGEDRuckwkQl2v/qI+/e5D7vW0ISz88WPdO63jXQphzw69BSz5wTSPBYSoBrCAQIoVywcWPBEIzwg/HQRUH45aU6Pjf48q6FhgpgDIi6U0PJg8/JJHvNayjUmFN+OP1Iy/j+kuvXgWdKF2obYZ4e7yA8ca0BAaz6nBbSzUelovN/5kuom8+fAOtrWmPauIoEq19aAQbePUqXdghHGsSXulhbTvojIvU581aL+NiGA99XPmHYn0ktfD7qTHykrF59lTWV2EwfleoMVjD6USrRv/LTqJjqqLSyHnvavt1CoblpzJYMbM3wYonJt57WkJT94igaZfrLI=
   - secure: f+8vXOpE1fN1m9akVDJzzt8baYOQ5GlYCWKlluUQg1YAyCZnaGBKFhOATqk3+HI4rFIW6DMVgaACONsSqkc3U+h/9Gqk6j2hcsErLcvTelqQFRpyx1DG/TJaheRlM8ObKti4Gqud9QkgVSPQRPTUIdEnyCOYvFLiqMlJIHtuyJIkkOiIuT9FWe0lk+sOL1ppOUxfcEc9Mnb+dMOgUiNspf3VK4Kp0e1NoAlVDXnj/NuOdK3K2Lo0uU3A4ybBMgAtQwyPx9BQpR2dCZB2j4QiQQiSciVRn3KM5LsUDzYq4YI4ve/B9CwPCjAwnXMcfXnw1gBTt/xj7oZLXqVQmHT0zMe0GJuavx/mSE8ysk4WU+k57icBIPmA1X0+QmbqoglOLe4lIEbjQoG4NSQuR4Q4G+Qfp0o/KvM1JyWF2SKKgGqKfKRlFIg8Fhj/nco8GTtsW0g8lPt/x+GRj0J+rcsmPkqEGBAYKkZ3fmDXrUYS18cFhRzVehSYHbflJI7e4Zx1mcoqJNL1YPjyiGANUU5aumrIgDSMddhV9GsECmSjSXITXdFs5mLWaCRF+tmOixduL31xplBk6IAMtNH3dILeG3lVgTrrRhL+mlFEf5sMDnwHNbAgA4rh2VBfC9b5OH2nCyvs6Xbvoq8W9OEynt1FXmnRTqvfmF3BAbMdN0e5Ack=
+  - secure: KV+B/7ake0baInLQ2G62CCqreuO1tNu59RvBUh2kk1bAyBDubXHbhkYiOq2//0DOmjo2tBJvGBFh/p+Fj9jZ2cY5uG3f5e1QmFvvRGJ9RPFGee1MYakBq6lcraDX8lcOA1mrYwp08TeFQY0vD5+i0d3Kblym4q44e/bMJMJ13WagnOBzME34d9lyROi0hiFxDI1YwcDK6IoxLOhI/S1n7ywvz3jrQtQHqUCQxb9OR/EsACugmfuzaDrrJzZGxAkO65yFqkKx4FPsxQ1v2ZbXgFLlgsIP8cX4lEvQmh1weUU/b3CxnMszCCX3eTEjAztAbFAYlK7cNCI+zD+UoYdazj2j0I7sPr5g1gGx5AyjcLMnt66alAyQkUJzdCbumt43ZwCovBrdclNdFfUtPFCMJErqZ102ZRjNVcOSbCxMPVdZxX8PvWHfOVIevZCWiNyI63o7jL1JpBWmLN/n+K+DJUPy1DJ+Zbs3GVZuVWf/6Jp6cOcScgLlIedIeWGAxgbBDqt0RNKQq+hzrkn/sH2WaZoMj8o9ZOGZPPsjDilw1uRvzo/KxwkX2I7bzSfK8+tqCX37MIhYEPsPgQnfnFV9WRLdptQSgQv6ZKpsGi0R1K4hxGkVEm30GK4UF3kgwnIDsjNbKJ9pNT3OO0+VHmy+5AsmaSryKF7yFLsdAL6bn5E=
