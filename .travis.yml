@@ -5,12 +5,12 @@ branches:
 services:
 - docker
 before_script:
-- docker-compose -f compose/test/docker-compose.yml up --build -d
+- docker-compose up --build -d
 script:
 - docker ps -a
-- docker-compose -f compose/test/docker-compose.yml run web rake db:create
-- docker-compose -f compose/test/docker-compose.yml run web rake db:test:prepare
-- docker-compose -f compose/test/docker-compose.yml run web rake test
+- docker-compose run web rake db:create
+- docker-compose run web rake db:test:prepare
+- docker-compose run web rake test
 after_success:
 - chmod +x *.sh
 - ./build.sh && ./push.sh
