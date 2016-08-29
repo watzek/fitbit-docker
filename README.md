@@ -26,9 +26,20 @@ PostgreSQL -v 9.5.4
 
 
 ## Weekly Project Schedule
-For Rishi's Independent Study (fall 2016), we'll aim for this weekly schedule and tie them to project milestones.
+For Rishi's Independent Study (fall 2016), we'll aim for this weekly schedule and tie them to project milestones (where appropriate).
 
 <table>
-<tr><th>Week</th><th>Milestone</th></tr>
-<tr><td>Week 1: Aug 29-Sept 2</td>Determine Development Workflow<td>
+<tr><th>Week</th><th>Milestone</th><th>Notes</th></tr>
+<tr><td>Week 1: Aug 29-Sept 2</td><td>Determine Development Workflow</td><td></td></tr>
+<tr><td>Week 2: Sept 5-9</td><td></td><td></td></tr>
+<tr><td>Week 3: Sept 12-16</td><td></td><td></td></tr>
+<tr><td>Week 5: Sept 19-23</td><td></td><td></td></tr>
+<tr><td>Week 6: Sept 26-30</td><td></td><td></td></tr>
+<tr><td>Week 7: Sept 19-23</td><td></td><td></td></tr>
+<tr><td>Week 8: Sept 19-23</td><td></td><td></td></tr>
+<tr><td>Week 9: Sept 19-23</td><td></td><td></td></tr>
+<tr><td>Week 10: Sept 19-23</td><td></td><td></td></tr>
+<tr><td>Week 11: Sept 19-23</td><td></td><td></td></tr>
+<tr><td>Week 12: Sept 19-23</td><td></td><td></td></tr>
+<tr><td>Week 13: Sept 19-23</td><td></td><td></td></tr>
 </table>
