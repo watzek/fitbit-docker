@@ -18,3 +18,17 @@ PostgreSQL -v 9.5.4
 ```
 
 ## Running Locally
+
+
+
+
+
+
+
+## Weekly Project Schedule
+For Rishi's Independent Study (fall 2016), we'll aim for this weekly schedule and tie them to project milestones.
+
+<table>
+<tr><th>Week</th><th>Milestone</th></tr>
+<tr><td>Week 1: Aug 29-Sept 2</td>Determine Development Workflow<td>
+</table>
