@@ -5,7 +5,7 @@ branches:
 services:
 - docker
 before_script:
-- echo "repo_secret_token: $COVERALLS_TOKEN" >> .coveralls.yml
+- printf "repo_secret_token: %s" "$COVERALLS_TOKEN" >> .coveralls.yml
 - docker-compose up --build -d
 script:
 - docker ps -a
