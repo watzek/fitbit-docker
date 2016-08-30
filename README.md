@@ -5,7 +5,7 @@
 
 This is the fitbit app made by the Digital Initiatives at Watzek Library, Lewis & Clark College.
 
-## Dependencies for development
+## Development
 
 The application runs on [docker](https://www.docker.com/) containers.
 
@@ -20,11 +20,11 @@ Rails -v 4.2.0
 ```
 PostgreSQL -v 9.5.4
 ```
-## Developing Locally
+### Developing Locally
 
 Use the steps provided in the [wiki](https://github.com/WatzekDigitalInitiatives/fitbit-ror/wiki/Development) to set up a dev environment.
 
-## Installing
+## Install
 
 Use the [installation]() steps provided in the wiki to install the app locally.
 
