@@ -14,3 +14,4 @@
 
 # Ignore coverall coverage
 coverage
+.coveralls.yml
