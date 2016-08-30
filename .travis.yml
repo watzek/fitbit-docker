@@ -14,7 +14,7 @@ script:
 - docker-compose exec web rake db:create
 - docker-compose exec web rake db:test:prepare
 - docker-compose exec web rake test
-- docker-compose exec web export COVERALLS_TOKEN = "$COVERALLS_TOKEN"
+- docker-compose exec web export COVERALLS_TOKEN = $COVERALLS_TOKEN
 - docker-compose exec web echo $COVERALLS_TOKEN
 - docker-compose exec web bundle exec coveralls push
 after_success:
