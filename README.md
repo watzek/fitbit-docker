@@ -7,22 +7,26 @@ This is the fitbit app made by the Digital Initiatives at Watzek Library, Lewis 
 
 ## Dependencies for development
 
-The application runs on docker. Install docker on your computer using [this](https://docs.docker.com/engine/installation/) instructions.
+The application runs on [docker](https://www.docker.com/) containers.
 
-It uses:
+It runs on two containers:
 
+*Web*
 ```
 Ruby -v 2.3.1
 Rails -v 4.2.0
+```
+*Database*
+```
 PostgreSQL -v 9.5.4
 ```
+## Developing Locally
 
-## Running Locally
+Use the steps provided in the [wiki](https://github.com/WatzekDigitalInitiatives/fitbit-ror/wiki/Development) to set up a dev environment.
 
+## Installing
 
-
-
-
+Use the [installation]() steps provided in the wiki to install the app locally.
 
 
 ## Weekly Project Schedule
