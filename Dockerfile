@@ -15,5 +15,6 @@ RUN mkdir /fitbit-ror
 ADD . /fitbit-ror
 WORKDIR /fitbit-ror
 RUN bundle install --without production
+RUN gem install bundler
 RUN chmod +x *.sh
 CMD init.sh
