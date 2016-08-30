@@ -5,7 +5,6 @@ services:
   web:
     build: .
     command:
-      - gem install bundler
       - bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/fitbit-ror
